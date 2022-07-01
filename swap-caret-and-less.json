@@ -1,0 +1,46 @@
+{
+  "title": "swap-caret-and-less",
+  "rules": [
+    {
+      "description": "caret-less",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "optional": [
+                "left_shift",
+		"right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "non_us_backslash"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "non_us_backslash",
+            "modifiers": {
+              "optional": [
+                "left_shift",
+		"right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "grave_accent_and_tilde"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
